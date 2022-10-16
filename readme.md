@@ -124,6 +124,14 @@ The following pre-defined dependency matrices can be used as optional parameter 
 ]
 ```
 
+# Required packages
+
+- numpy
+- argparse
+- scipy
+- matplotlib
+- json
+- pytest
 
 
 # Project structure

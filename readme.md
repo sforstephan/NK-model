@@ -23,7 +23,7 @@ $$ C = \frac{1}{N} \sum_{i=1}^{N} c_i .$$
 
 The fitness contributions are captured in so-called $NK$-fitness landscapes. Their complexity can be tuned via the parameter $K$. The higher (lower) $K$, more more (less) rugged is the resulting fitness landscape, and the more difficult (easier) it is to find the global maximum in the landscape. The fitness landscape can best be imagined as a hypercube that becomes more complex with increases in $K$. 
 
-The genome's evolution is captured as follows: An agent moves in the fitness landscape by performing hill climbing-based search for genomes with a higher fitness. However, to avoid long jumps, the space in which the agent can move is restricted to the neighbourhood of the current genome (the current bit-string), whereby the neighbourhood is defined as the Hamming Distance (and is often set to 1). This means, the neighbourhood are all genomes in which one bit is flipped compared to the current genome. 
+The genome's evolution is captured as follows: An agent moves in the fitness landscape by performing hill climbing-based search for genomes with a higher fitness. However, to avoid long jumps, the space in which the agent can move is restricted to the neighbourhood of the current genome (the current bit-string), whereby the neighbourhood is defined as the Hamming Distance. This means, the neighbourhood are all genomes in which one bit is flipped compared to the current genome. 
 
 The proposed model is an extension of Kauffman's $NK$ model: In the original model, it is assumed that evolution happens without noise. In the implementation included here, I add an optional normally distributed error term to the process of evolution, meaning that the fitness of genomes if uncertain during hill climbing (but, of course, certain once the genome is selected). 
 
@@ -42,7 +42,7 @@ For explanations on how to run the model and the parameters see [here](#run): Th
 generated using parameters `n` and `k`. The evolutionary process is simulated `repeat` times for `period` time steps.  
 There is uncertainty in the evolutionary process, meaning that the agent might make a normally distributed error with mean `mean` and standard deviation `std` when estimating the fitness during the process of evolution. The model stores and returns simulated data, 
 statistics, and a plot containing the mean fitness and confidence intervals with confidence level `confidence`. The computation of confidence intervals is contingent on the number of repetitions (i.e., observations). For less than 30 observations per timee step, the computation of the confidence intervals
-relies on the t-Distributions, and on the Normal Distribution otherwise. 
+relies on the t-Distribution, and on the Normal Distribution otherwise. 
 
 The model stores the following files:
 
@@ -59,14 +59,16 @@ Start the program via the command line (`python project.py`).
 
 ### Optional parameters
 The following arguments are **optional**:
-  - `-n`: Number of genes in the genome, integer, default value = 5
-  - `-k`: Number of interdependencies between genes, integer (0 <= k <= N-1), default value = 2
-  - `-matrix`: Pre-defined dependency matrix (see [below](#matrices)), type string. Allowed keys are: main, block, ring, random, default value = random. If random, a dependency matrix with parameter `n` and `k` is randomly generated, otherwise one of the pre-defined matrices is used. 
-  - `-time`: Time steps in one simulation round, i.e., time steps the genome can evolve, integer, default value = 100
-  - `-repeat`: Number of simulation rounds, i.e., number of times the entire process of evolution is observed, integer, default value = 8
-  - `-mean`: Mean of the prediction error during evolution, float, efault value = 0
-  - `-std`: Standard deviation of the error during evolution, float, efault value = 0
-  - `-confidence`: Confidence interval used for the plot, float, default value = 0.9
+  - `-n`: Number of genes in the genome, integer, default value = `5`
+  - `-k`: Number of interdependencies between genes, integer (0 <= k <= N-1), default value = `2`
+  - `-matrix`: Pre-defined dependency matrix (see [below](#matrices)), type string. Allowed keys are: `main`, `block`, `ring`, `random`, default value = `random`. If random, a dependency matrix with parameter `n` and `k` is randomly generated, otherwise one of the pre-defined matrices is used. 
+  - `-time`: Time steps in one simulation round, i.e., time steps the genome can evolve, integer, default value = `100`
+  - `-repeat`: Number of simulation rounds, i.e., number of times the entire process of evolution is observed, integer, default value = `8`
+  - `-mean`: Mean of the prediction error during evolution, float, efault value = `0.0`
+  - `-std`: Standard deviation of the error during evolution, float, efault value = `0.0`
+  - `-confidence`: Confidence interval used for the plot, float, default value = `0.9`
+
+To avoid long jumps (and chaotic behavior), the neighbourhood during evolution is fixed at a Hamming Distance of $1$. 
 
 ### <a id="matrices"></a>Pre-defined dependency matrices
 

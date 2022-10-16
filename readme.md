@@ -90,7 +90,7 @@ The following pre-defined dependency matrices can be used as optional parameter 
 ]
 ```
 
-Key `block`: Block-like interdependencies along the main diagonal. 
+- Key `block`: Block-like interdependencies along the main diagonal. 
 
 ```
 [
@@ -107,7 +107,7 @@ Key `block`: Block-like interdependencies along the main diagonal.
 ]
 ```
 
-Key `ring`: Ring-like interdependencies, extension of the block structure. The first block is interdependent with the second block, the second block is interdependent with the third block, etc. 
+- Key `ring`: Ring-like interdependencies, extension of the block structure. The first block is interdependent with the second block, the second block is interdependent with the third block, etc. 
 
 ```
 [

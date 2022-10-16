@@ -29,7 +29,17 @@ Kauffman's $NK$ model is a well-established model that is applied in research in
 
 # How to run the program
 
-How to run your application.
+Start the program via the command line (<code>python project.py<\code>). 
+
+The following arguments are optional:
+  - <code>-n<\code>
+  - <code>-n<\code>
+  - <code>-n<\code>
+  - <code>-n<\code>
+  - <code>-n<\code>
+  - <code>-n<\code>
+  - <code>-n<\code>
+  - <code>-n<\code>
 
 # Features
 

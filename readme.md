@@ -17,7 +17,7 @@ The fitness contributions are computed according to:
 $$ c_i = f(n_i, n_{i_1}, \dots, n_{i_K}) \sim U(0, 1),$$
 
 where $n_i \in \\{0, 1\\}$ indicates gene $i \in \\{1, \dots, N\\}$ and $\\{i_1, \dots, i_K\\} \subseteq \\{1, \dots, i-1, i+1, \dots, N\\}$.
-The genomes fitness is the mean of the fitness contributions:
+The genome's fitness is the mean of the fitness contributions:
 
 $$ C = \frac{1}{N} \sum_{i=1}^{N} c_i .$$
 

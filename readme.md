@@ -128,7 +128,7 @@ The following pre-defined dependency matrices can be used as optional parameter 
 
 - numpy
 - argparse
-- scipy
+- SciPy
 - matplotlib
 - json
 - pytest

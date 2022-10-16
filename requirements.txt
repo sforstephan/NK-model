@@ -2,7 +2,7 @@ Required packages:
 
 - numpy
 - argparse
-- scipy
+- SciPy
 - matplotlib
 - json
 - pytest

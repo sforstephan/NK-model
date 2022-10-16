@@ -56,10 +56,7 @@ def main():
         help="standard deviation of the error when predicting fitness",
     )
     parser.add_argument(
-        "-confidence",
-        type=float,
-        default=0.9,
-        help="confidence interval for plot",
+        "-confidence", type=float, default=0.9, help="confidence interval for plot",
     )
 
     args = parser.parse_args()

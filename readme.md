@@ -3,7 +3,7 @@
 
 # Introduction
 
-The final project is an extended version of Kauffman's $NK$-model (see, e.g., [[1]](#1) and [[2]](#2)). The model
+The final project is an extended version of Kauffman's $NK$ model (see, e.g., [[1]](#1) and [[2]](#2)). The model
 captures a genome consisting of N (binary) genes, and a genome can be represented in the form of an $N$- dimensional bitstring. Every gene contributes the 
 $0 \leq c_i \leq 1$ to the genome's fitness. However, the fitness contribution might not depend on a single gene, but there are at most $K = N-1$ 
 interdependencies with other genes. This means that the fitness contribution $c_i$ of gene $n_i$
@@ -25,7 +25,7 @@ The proposed model is an extension of Kauffman's $NK$ model: In the original mod
 
 # Distinctiveness and Complexity
 
-Kauffman's $NK$-model is a well-established model that is applied in research in a multiplicity of fields (also beyond the field of biology). Initializing the landscape is a computationally complex problem that is solved following an object-oriented approach. Also, the project does not only implment but also extend the original $NK$-model. 
+Kauffman's $NK$ model is a well-established model that is applied in research in a multiplicity of fields (also beyond the field of biology). Initializing the landscape is a computationally complex problem that is solved following an object-oriented approach. Also, the project does not only implment but also extend the original $NK$ model. 
 
 # How to run the program
 

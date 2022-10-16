@@ -40,7 +40,9 @@ moves on the landscape.
 
 For explanations on how to run the model and the parameters see [here](#run): The pattern of dependency can either be selected from a pre-defined dependency matrix (`main`, `block`, `ring`) or randomly 
 generated using parameters `n` and `k`. The evolutionary process is simulated `repeat` times for `period` time steps.  
-There is uncertainty in the evolutionary process, meaning that the agent might make a normally distributed error with mean `mean` and standard deviation `std` when estimating the fitness during the process of evolution. 
+There is uncertainty in the evolutionary process, meaning that the agent might make a normally distributed error with mean `mean` and standard deviation `std` when estimating the fitness during the process of evolution. The model stores and returns simulated data, 
+statistics, and a plot containing the mean fitness and confidence intervals with confidence level `confidence`. The computation of confidence intervals is contingent on the number of repetitions (i.e., observations). For less than 30 observations per timee step, the computation of the confidence intervals
+relies on the t-Distributions, and on the Normal Distribution otherwise. 
 
 The model stores the following files:
 

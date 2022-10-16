@@ -190,14 +190,14 @@ def compute_statistics(fitness: np.ndarray, confidence):
     for i in range(fitness.shape[1]):
         if fitness.shape[0] <= 30:
             tmp = st.t.interval(
-                confidence=confidence,
+                alpha=confidence,
                 df=len(fitness[:, i]) - 1,
                 loc=np.mean(fitness[:, i]),
                 scale=st.sem(fitness[:, i]),
             )
         else:
             tmp = st.norm.interval(
-                confidence=confidence,
+                alpha=confidence,
                 loc=np.mean(fitness[:, i]),
                 scale=st.sem(fitness[:, i]),
             )

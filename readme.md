@@ -19,12 +19,13 @@ $$ C = \frac{1}{N} \sum_{i=1}^{N} c_i .$$
 
 The fitness contributions are captured in so-called $NK$-fitness landscapes. Their complexity can be tuned via the parameter $K$. The higher (lower) $K$, more more (less) rugged is the resulting fitness landscape, and the more difficult (easier) it is to find the global maximum in the landscape. The fitness landscape can best be imagined as a hypercube that becomes more complex with increses in $K$. 
 
-The genome's evolution is captured as follows: An agent moves in the fitness lanscape by performing hill climbing-based search. However, to avoid long jumps, the space in which the agent can move is restricted to the neighbourhood of the current genome (the current bit-string), whereby the neighourhood is defined as the Hamming Distance (and is often set to 1). This means, the neighbourhood are all genomes in which one bit is flipped compared to the current genome. 
+The genome's evolution is captured as follows: An agent moves in the fitness lanscape by performing hill climbing-based search for genomes with a higher fitness. However, to avoid long jumps, the space in which the agent can move is restricted to the neighbourhood of the current genome (the current bit-string), whereby the neighourhood is defined as the Hamming Distance (and is often set to 1). This means, the neighbourhood are all genomes in which one bit is flipped compared to the current genome. 
 
-
+The proposed model is an extension of Kauffman's $NK$ model: In the original model, it is assumed that evolution happens without noise. In the implementation included here, I add an optional error term to the process of evolution, meaning that the fitness of genomes if uncertain during hill climbing (but, of course, certain once the genome is selected). 
 
 # Distinctiveness and Complexity
-Why you believe your project satisfies the distinctiveness and complexity requirements, mentioned above.
+
+Kauffman's $NK$-model is a well-established model that is applied in research in a multiplicity of fields (also beyond the field of biology). Initializing the landscape is a computationally complex problem that is solved following an object-oriented approach. Also, the project does not only implment but also extend the original $NK$-model. 
 
 # How to run the program
 

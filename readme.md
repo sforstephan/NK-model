@@ -129,7 +129,7 @@ The following pre-defined dependency matrices can be used as optional parameter 
 # Project structure
 
 The model is organized in three files.
-- `NK.py` contains the class definitions for `NK`(the parend class) and `Landscape` and `Agent` the two child classes
+- `NK.py` contains the class definitions for `NK`(the parend class) and `Landscape` and `Agent` (the two child classes)
 - `project.py` includes the main simulation loop and functions to create and check random dependency matrices and data analysis
 - `matrices.py` includes the pre-defined dependency matrices
 

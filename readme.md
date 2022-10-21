@@ -3,7 +3,7 @@
 
 # Video
 
-A video that outlines the main features of the mode is available [here](https://vimeo.com/760796080/c4be908e04). 
+A video that outlines the main features of the model is available [here](https://vimeo.com/760796080/c4be908e04). 
 
 # Introduction
 

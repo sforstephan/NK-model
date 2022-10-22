@@ -1,3 +1,4 @@
+@ -1,192 +0,0 @@
 
 # Final project
 
@@ -189,4 +190,4 @@ The model is organized in three files.
 Kauffman, S.A. and Weinberger, E.D., 1989. The NK model of rugged fitness landscapes and its application to maturation of the immune response. Journal of Theoretical Biology, 141(2), pp.211-245.
 
 <a id="2">[2]</a> 
-Weinberger, E.D., 1991. Local properties of Kauffman’s N-k model: A tunably rugged energy landscape. Physical review A, 44(10), p.6399.
+Weinberger, E.D., 1991. Local properties of Kauffman?s N-k model: A tunably rugged energy landscape. Physical review A, 44(10), p.6399.

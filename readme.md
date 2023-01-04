@@ -1,14 +1,7 @@
-@ -1,192 +0,0 @@
-
-# Final project
-
-# Video
-
-A video that outlines the main features of the model is available [here](https://vimeo.com/760796080/c4be908e04). 
 
 # Introduction
 
-The final project is an extended version of Kauffman's $NK$ model (see, e.g., [[1]](#1) and [[2]](#2)). The model
+The project is an extended version of Kauffman's $NK$ model (see, e.g., [[1]](#1) and [[2]](#2)). The model
 captures a genome consisting of N (binary) genes, and a genome can be represented in the form of an $N$- dimensional bitstring. Every gene contributes the 
 $0 \leq c_i \leq 1$ to the genome's fitness. However, the fitness contribution might not depend on a single gene, but there are at most $K = N-1$ 
 interdependencies with other genes. This means that the fitness contribution $c_i$ of gene $n_i$
